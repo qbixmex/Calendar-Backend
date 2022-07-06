@@ -1,5 +1,7 @@
+@host = http://localhost:4000
+
 ### Register
-POST http://localhost:4000/api/auth/new
+POST {{host}}/api/auth/new
 Content-Type: application/json
 
 {
@@ -9,7 +11,7 @@ Content-Type: application/json
 }
 
 ### Login
-POST http://localhost:4000/api/auth/
+POST {{host}}/api/auth/
 Content-Type: application/json
 
 {
@@ -18,5 +20,5 @@ Content-Type: application/json
 }
 
 ### Renew Token
-GET http://localhost:4000/api/auth/renew
+GET {{host}}/api/auth/renew
 x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmM1M2VmNDdiNGNmYWZmODAxN2UxNzAiLCJuYW1lIjoiUGV0ZXIgUGFya2VyIiwiaWF0IjoxNjU3MTI2OTk4LCJleHAiOjE2NTcxMzA1OTh9.GqfNFjONQj1ikkkDxdlOwsDjhRMUPtBgBtkzIBHRp5c

@@ -1,0 +1,29 @@
+@host = http://localhost:4000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmM1M2VmNDdiNGNmYWZmODAxN2UxNzAiLCJuYW1lIjoiUGV0ZXIgUGFya2VyIiwiaWF0IjoxNjU3MTMwNjIyLCJleHAiOjE2NTcxMzQyMjJ9.EhVfgmdGpRZ1K73hWHc3w1pfzUWLgYiskLd9ZC_gjsI
+
+### Events List
+GET {{host}}/api/events
+x-token: {{token}}
+
+### Create Event
+POST {{host}}/api/events
+x-token: {{token}}
+
+{
+  "title": "Junta con el equipo de desarrollo",
+  "body": "Se trataran temas de los objectivos trazados",
+  "start": 0123456789,
+  "end": 8524864595
+}
+
+### Update Event
+PATCH {{host}}/api/events/123
+x-token: {{token}}
+
+{
+  "end": 8524851595
+}
+
+### DELETE Event
+DELETE {{host}}/api/events/123
+x-token: {{token}}
