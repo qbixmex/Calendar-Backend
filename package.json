@@ -1,0 +1,20 @@
+{
+  "name": "calendar-backend",
+  "version": "0.1.0",
+  "description": "This a Express, Mongo, NodeJs Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "javascript",
+    "express",
+    "mongo"
+  ],
+  "author": "Daniel González Briseño",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
