@@ -1,0 +1,9 @@
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: Arial, Geneva, serif;
+}
+
+h1 {
+  color: hsl(360, 75%, 55%);
+}
