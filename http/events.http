@@ -1,5 +1,5 @@
 @host = http://localhost:4000
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmM1M2VmNDdiNGNmYWZmODAxN2UxNzAiLCJuYW1lIjoiUGV0ZXIgUGFya2VyIiwiaWF0IjoxNjU3MTMwNjIyLCJleHAiOjE2NTcxMzQyMjJ9.EhVfgmdGpRZ1K73hWHc3w1pfzUWLgYiskLd9ZC_gjsI
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmM1M2VmNDdiNGNmYWZmODAxN2UxNzAiLCJuYW1lIjoiUGV0ZXIgUGFya2VyIiwiaWF0IjoxNjU3MTM0MzE5LCJleHAiOjE2NTcxMzc5MTl9.dX8w6Zbfrm2HFMn_XL3DQKRVrSIgKV0i42efRixm0sM
 
 ### Events List
 GET {{host}}/api/events
@@ -11,10 +11,10 @@ Content-Type: application/json
 x-token: {{token}}
 
 {
-  "title": "Junta con el equipo de desarrollo",
-  "notes": "Se trataran temas de los objectivos trazados",
-  "start": 1,
-  "end": 10000
+  "title": "Junta con el proyect manager",
+  "notes": "Se trataran temas de la planeación de sprint",
+  "start": 1000000,
+  "end": 1000100
 }
 
 ### Update Event
