@@ -1,5 +1,5 @@
 @host = http://localhost:4000
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmM1M2VmNDdiNGNmYWZmODAxN2UxNzAiLCJuYW1lIjoiUGV0ZXIgUGFya2VyIiwiaWF0IjoxNjU3MTM3MzcxLCJleHAiOjE2NTcxNDA5NzF9.VIWyzyaVIu8QsN9w-eUtC3GwubOwaKtO5vnVlfoIPx0
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmM1M2VmNDdiNGNmYWZmODAxN2UxNzAiLCJuYW1lIjoiUGV0ZXIgUGFya2VyIiwiaWF0IjoxNjU3MTQxMzcwLCJleHAiOjE2NTcxNDQ5NzB9.EjwMfnIXj1tJExuHqrWWASrVoOLkvfu_2fpylkJi5QI
 
 ### Events List
 GET {{host}}/api/events
@@ -11,10 +11,10 @@ Content-Type: application/json
 x-token: {{token}}
 
 {
-  "title": "Junta con el proyect manager",
-  "notes": "Se trataran temas de la planeación de sprint",
-  "start": 1000000,
-  "end": 1000100
+  "title": "Junta con el equipo de ventas",
+  "notes": "Trazar las estrategias para la proxima campaña",
+  "start": 2000000,
+  "end": 2000100
 }
 
 ### Update Event
@@ -28,5 +28,5 @@ x-token: {{token}}
 }
 
 ### DELETE Event
-DELETE {{host}}/api/events/123
+DELETE {{host}}/api/events/62c5de1a725e5a953cd31032
 x-token: {{token}}
