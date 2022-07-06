@@ -8,6 +8,9 @@ const listEvents = ('/', ( req = request, res = response ) => {
 });
 
 const createEvent = ('/', ( req = request, res = response ) => {
+
+  console.log(req.body);
+
   res.json({
     ok: true,
     msg: 'Event Created'

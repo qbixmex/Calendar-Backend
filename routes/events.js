@@ -1,9 +1,6 @@
 const { Router } = require('express');
 const {
-  listEvents,
-  createEvent,
-  updateEvent,
-  deleteEvent,
+  listEvents, createEvent, updateEvent, deleteEvent
 } = require('../controllers/events');
 const jwtValidate = require('../middlewares/jwt-validate');
 
