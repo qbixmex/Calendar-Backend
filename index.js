@@ -4,6 +4,9 @@ require('dotenv').config();
 // Create Server
 const app = express();
 
+// Body parser
+app.use( express.json() );
+
 // Public Directory
 app.use( express.static('public') );
 
