@@ -8,9 +8,7 @@ const app = express();
 app.use( express.static('public') );
 
 // Routes
-app.get('/', (_reqquest, response) => {
-  response.status(200).json({ ok: true });
-});
+app.use('/api/auth', require('./routes/auth'));
 
 // Listen App
 app.listen(process.env.PORT, () => {
