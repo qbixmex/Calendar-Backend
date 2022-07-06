@@ -1,64 +1,47 @@
 const { response } = require("express");
+const { validationResult } = require("express-validator");
 
 const userCreate = (req, res = response) => {
 
   const { name, email, password } = req.body;
 
-  // Middleware -> JOI
-  // Middleware -> Express Validator
+  // Check Errors
+  const errors = validationResult( req );
 
-  // Validations
-  if ( !name ) {
-    return res.json({
-      ok: false,
-      msg: 'El nombre es obligatorio.'
-    });
-  }
-
-  if ( name.length < 3 ) {
+  if ( !errors.isEmpty() ) {
     return res.status(400).json({
       ok: false,
-      msg: 'El nombre debe ser por lo menos de 3 caracteres.'
-    });
-  }
-
-  if ( !email ) {
-    return res.status(400).json({
-      ok: false,
-      msg: 'El email es obligatorio.'
-    });
-  }
-
-  if ( !password ) {
-    return res.status(400).json({
-      ok: false,
-      msg: 'La contraseña es obligatoria.'
-    });
-  }
-
-  if ( password.length < 8 ) {
-    return res.status(400).json({
-      ok: false,
-      msg: 'La contraseña debe ser por lo menos de 8 caracteres.'
-    });
+      errors: errors.mapped()
+    });  
   }
 
   // TODO: HashPassword
   // TODO: save to mongo db
   
-  res.json({
+  res.status(201).json({
     ok: true,
-    user: {
-      name,
-      email,
-      password,
-    },
+    user: { name, email, password },
   });
 
 };
 
-const loginUser = (_req, res = responses) => {
-  res.json({ ok: true, message: 'renew' });
+const loginUser = (req, res = responses) => {
+  const { email, password } = req.body;
+
+  // Check Errors
+  const errors = validationResult( req );
+
+  if ( !errors.isEmpty() ) {
+    return res.status(400).json({
+      ok: false,
+      errors: errors.mapped()
+    });  
+  }
+
+  res.json({
+    ok: true,
+    user: { name: 'Peter Parker', email }
+  });
 };
 
 const renewToken = (_req, res = response) => {
