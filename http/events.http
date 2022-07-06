@@ -1,5 +1,5 @@
 @host = http://localhost:4000
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmM1M2VmNDdiNGNmYWZmODAxN2UxNzAiLCJuYW1lIjoiUGV0ZXIgUGFya2VyIiwiaWF0IjoxNjU3MTM0MzE5LCJleHAiOjE2NTcxMzc5MTl9.dX8w6Zbfrm2HFMn_XL3DQKRVrSIgKV0i42efRixm0sM
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MmM1M2VmNDdiNGNmYWZmODAxN2UxNzAiLCJuYW1lIjoiUGV0ZXIgUGFya2VyIiwiaWF0IjoxNjU3MTM3MzcxLCJleHAiOjE2NTcxNDA5NzF9.VIWyzyaVIu8QsN9w-eUtC3GwubOwaKtO5vnVlfoIPx0
 
 ### Events List
 GET {{host}}/api/events
@@ -18,11 +18,13 @@ x-token: {{token}}
 }
 
 ### Update Event
-PATCH {{host}}/api/events/123
+PATCH {{host}}/api/events/62c5dcfe68842755ab0b7b27
+Content-Type: application/json
 x-token: {{token}}
 
 {
-  "end": 8524851595
+  "title": "Junta con el project manager",
+  "notes": "Se trazaran objectivos del proyecto para su evaluación"
 }
 
 ### DELETE Event
