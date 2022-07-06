@@ -3,8 +3,8 @@ POST http://localhost:4000/api/auth/new
 Content-Type: application/json
 
 {
-  "name": "Steve Rogers",
-  "email": "captainamerica@marvel.com",
+  "name": "Bruce Wayne",
+  "email": "batman@dc.com",
   "password": "0123456789"
 }
 
@@ -14,7 +14,7 @@ Content-Type: application/json
 
 {
   "email": "spiderman@marvel.com",
-  "password": "01234567890"
+  "password": "0123456789"
 }
 
 ### Renew Token
