@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const { userCreate, loginUser, renewToken } = require('../controllers/auth');
 const { check } = require('express-validator');
+const inputValidation = require('../middlewares/input-validation');
 
 const router = Router();
 
@@ -11,6 +12,7 @@ router.post('/new', [
   check('email', 'Formato de email es incorrecto').isEmail(),
   check('password', 'La contraseña es obligatoria').not().isEmpty(),
   check('password', 'La contraseña debe ser de 8 caracteres mínimo').isLength({ min: 8 }),
+  inputValidation,
 ], userCreate);
 
 router.post('/', [
@@ -18,6 +20,7 @@ router.post('/', [
   check('email', 'Formato de email es incorrecto').isEmail(),
   check('password', 'La contraseña es obligatoria').not().isEmpty(),
   check('password', 'La contraseña debe ser de 8 caracteres mínimo').isLength({ min: 8 }),
+  inputValidation,
 ], loginUser);
 
 router.post('/renew', renewToken);
