@@ -1,23 +1,23 @@
-###
+### Register
 POST http://localhost:4000/api/auth/new
 Content-Type: application/json
 
 {
   "name": "Steve Rogers",
   "email": "captainamerica@marvel.com",
-  "password": "icandothisallday"
+  "password": "0123456789"
 }
 
-###
+### Login
 POST http://localhost:4000/api/auth/
 Content-Type: application/json
 
 {
   "email": "spiderman@marvel.com",
-  "password": "theamazingspiderman"
+  "password": "01234567890"
 }
 
-###
+### Renew Token
 POST http://localhost:4000/api/auth/renew
 Content-Type: application/json
 
