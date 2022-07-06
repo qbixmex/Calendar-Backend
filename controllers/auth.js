@@ -55,7 +55,7 @@ const loginUser = async (req, res = responses) => {
     if ( !user ) {
       return res.status(400).json({
         ok: false,
-        msg: `User does not exist`,
+        msg: `El usuario no existe`,
       });
     }
 
@@ -65,7 +65,7 @@ const loginUser = async (req, res = responses) => {
     if ( !validPassword ) {
       return res.status(400).json({
         ok: false,
-        msg: `Incorrect password`,
+        msg: `Contraseña Incorrecta`,
       });
     }
 
