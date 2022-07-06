@@ -9,9 +9,26 @@ const userCreate = async (req, res = response) => {
   // TODO: save to mongo db
 
   try {
-    const user = new User({ name, email, password });
+
+    let user = await User.findOne({ email });
+
+    if ( user ) {
+      return res.status(400).json({
+        ok: false,
+        msg: `User exists with (${ email }) email`,
+      });
+    }
+
+    user = new User({ name, email, password });
+
     await user.save();
-    res.status(201).json({ ok: true, user });
+
+    res.status(201).json({
+      ok: true,
+      uid: user.id,
+      name: user.name
+    });
+
   } catch (error) {
     console.log(error);
     res.status(500).json({
