@@ -14,7 +14,7 @@ const userCreate = async (req, res = response) => {
     if ( user ) {
       return res.status(400).json({
         ok: false,
-        msg: `User exists with (${ email }) email`,
+        msg: `El email "${ email }" ya está registrado`,
       });
     }
 
