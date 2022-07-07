@@ -7,7 +7,6 @@ const EventSchema = Schema({
   },
   notes: {
     type: String,
-    required: [true, 'Las notas son obligatorias'],
   },
   start: {
     type: Date,
