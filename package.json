@@ -1,6 +1,6 @@
 {
   "name": "calendar-backend",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "This a Express, Mongo, NodeJs Application",
   "main": "index.js",
   "scripts": {
