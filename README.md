@@ -56,3 +56,11 @@ $ node
 ...
 SECRET_JWT_SEED=09f26e402586e2faa ...
 ```
+
+## Heroku Logs
+
+This only works if you are deploying your app in Heroku.
+
+```
+$ heroku logs -n 1000 --tail
+```
